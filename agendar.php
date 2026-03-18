@@ -1,9 +1,7 @@
 <?php
-
 $mensagem = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     $host = "localhost";
     $user = "root";
     $senha = "";
@@ -23,23 +21,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST['telefone'];
     $observacoes = $_POST['observacoes'];
 
-    $sql = "INSERT INTO agendamentos
-(servico, data_consulta, hora_consulta, nome, email, telefone, observacoes)
+    $stmt = $conn->prepare("INSERT INTO agendamentos (servico, data_consulta, hora_consulta, nome, email, telefone, observacoes) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssss", $servico, $data, $hora, $nome, $email, $telefone, $observacoes);
 
-VALUES
-('$servico','$data','$hora','$nome','$email','$telefone','$observacoes')";
-
-    if ($conn->query($sql) === TRUE) {
-
+    if ($stmt->execute()) {
         $mensagem = "Consulta agendada com sucesso!";
     } else {
-
         $mensagem = "Erro ao agendar consulta.";
     }
 
+    $stmt->close();
     $conn->close();
 }
-
 ?>
 
 <!DOCTYPE html>

@@ -6,7 +6,6 @@
     <title>Autenticação - Cliente</title>
     <link rel="stylesheet" href="style5.css">
 </head>
-
 <body>
 
     <div class="menu-topo">
