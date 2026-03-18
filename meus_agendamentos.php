@@ -1,12 +1,17 @@
 <?php
-include("conexao.php");
+$host = "localhost";
+$user = "root";
+$senha = "mysql";
+$banco = "almafisio";
+
+$conn = new mysqli($host, $user, $senha, $banco);
+
+if ($conn->connect_error) {
+    die("Erro na conexão: " . $conn->connect_error);
+}
 
 $sql = "SELECT * FROM agendamentos ORDER BY data_consulta, hora_consulta";
 $result = $conn->query($sql);
-
-if (!$result) {
-    die("Erro na consulta: " . $conn->error);
-}
 ?>
 
 <!DOCTYPE html>
