@@ -14,7 +14,8 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultas Agendadas - ADM</title>
-    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="style6.css">
+    <link rel="shortcut icon" href="imagens/logo.png">
 </head>
 <body>
 

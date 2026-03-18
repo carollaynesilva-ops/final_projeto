@@ -1,0 +1,134 @@
+/* RESET BÁSICO */
+{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CORPO DA PÁGINA */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #cfd8e3, #8fa4bf);
+    color: #2c3e50;
+}
+
+/* MENU TOPO */
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9dee5;
+    padding: 10px 30px;
+}
+
+.menu-topo img.logo {
+    height: 40px;
+}
+
+.menu-topo img.sair {
+    height: 25px;
+    cursor: pointer;
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #d9dee5;
+    padding: 15px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3c4a5d;
+    font-size: 16px;
+    position: relative;
+}
+
+nav a.ativo::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #2f6fed;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffffc9;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* TÍTULOS */
+h1, h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* TEXTO SECUNDÁRIO */
+.subtexto {
+    color: #6c7a89;
+    margin-bottom: 20px;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #5b9df9;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #3f7de0;
+}
+
+/* TABELAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+table th, table td {
+    border: 1px solid #999;
+    padding: 10px;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #e4e7eb;
+    font-weight: bold;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
