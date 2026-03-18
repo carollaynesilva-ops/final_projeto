@@ -1,0 +1,149 @@
+h1{
+        text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    color:#1e46c5;
+}
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #c9d8ea, #8ea9c7);
+}
+
+.navbar {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f9ff;
+    padding: 5px 40px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #4c5d80;
+    transition: 0.3s;
+}
+
+.nav-links li.active a,
+.nav-links a:hover {
+    color: #2b59ff;
+    /* azul igual ao botão */
+}
+
+.nav-links li.active::after {
+    content: "";
+    width: 55%;
+    height: 3px;
+    background: #2b59ff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    border-radius: 10px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+.icon-sair{
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+
+.container{
+    max-width:800px;
+    margin:60px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#3b4f6b;
+    margin-bottom:30px;
+}
+
+/* FORM */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+label{
+    font-weight:bold;
+    color:#444;
+}
+
+input, select, textarea{
+
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+textarea{
+    resize:none;
+    height:90px;
+}
+
+/* GRID */
+
+.row{
+    display:flex;
+    gap:15px;
+}
+
+.row div{
+    flex:1;
+}
+
+/* BOTÃO */
+
+button{
+
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2f5be7;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+
+

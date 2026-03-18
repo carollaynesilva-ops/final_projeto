@@ -1,0 +1,54 @@
+<html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almafisio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/logo.png">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="menu-topo">
+        <img src="imagens/logo.png" alt="Logo do sistema" class="logo">
+        <a href="https://www.google.com/" class="link-sair">
+            <img src="imagens/sair.png" alt="Sair do sistema" class="sair">
+        </a>
+    </div>
+    <h1 class="log">Criação de Conta</h1>
+    <div class="sla">
+        <div class="inputr">
+            <div>
+                <label for="email" class="campo">Insira seu E-mail:</label>
+                <input type="email" name="email" class="email" required>
+            </div>
+            <div>
+                <label for="senha" class="campo">Coloque sua Senha:</label>
+                <input type="password" name="senha" class="senha" required>
+            </div>
+            <div>
+                <label for="telefone" class="campo">Coloque seu Telefone:</label>
+                <input type="tel" name="telefone" class="telefone" required>
+            </div>
+        </div>
+        <div>
+            <p>Selecione seu cargo:</p>
+            <input type="radio" id="cliente" name="cargo" value="cliente">
+            <label for="cliente">CLIENTE</label>
+
+            <input type="radio" id="adm" name="cargo" value="adm">
+            <label for="adm">ADM</label>
+        </div>
+        <br>
+        <div>
+            <button type="submit" id="bt" onclick="verificarCargo()">Criar Conta</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+</html>
