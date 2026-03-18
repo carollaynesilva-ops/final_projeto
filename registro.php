@@ -1,26 +1,21 @@
-<html>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almafisio</title>
+    <title>Almafisio - Registro</title>
     <link rel="stylesheet" href="style5.css">
     <link rel="shortcut icon" href="imagens/logo.png">
-    <script src="script.js"></script>
 </head>
-
 <body>
     <div class="menu-topo">
         <img src="imagens/logo.png" alt="Logo do sistema" class="logo">
-        <a href="https://www.google.com/" class="link-sair">
+        <a href="decisao.php" class="link-sair">
             <img src="imagens/sair.png" alt="Sair do sistema" class="sair">
         </a>
     </div>
 
-    <form class="sla">
-
+    <form class="sla" method="POST" action="salvar.php">
         <h2>Criação de Conta</h2>
 
         <div class="campo">
@@ -43,22 +38,18 @@
 
             <div class="radio-group">
                 <label>
-                    <input type="radio" id="cliente" name="cargo" value="cliente"> Cliente
+                    <input type="radio" name="cargo" value="cliente" required> Cliente
                 </label>
 
                 <label>
-                    <input type="radio" id="adm" name="cargo" value="adm"> Adm
+                    <input type="radio" name="cargo" value="adm" required> Adm
                 </label>
             </div>
         </div>
 
-        <button type="button" onclick="verificarCargo()" id="bt">Criar Conta</button>
+        <button type="submit" id="bt">Criar Conta</button>
 
-        <p>Já tem uma conta? <a href="">entrar</a></p>
-
+        <p>Já tem uma conta? <a href="decisao.php">Entrar</a></p>
     </form>
 </body>
-
-</html>
-
 </html>

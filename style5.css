@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -62,18 +66,15 @@ body {
     filter: drop-shadow(0 0 5px rgba(43, 89, 255, 0.5));
 }
 
-/* título */
-.log {
-    position: absolute;
-    top: 90px;
-    font-size: 28px;
+.sla h2 {
+    text-align: center;
+    margin-bottom: 20px;
     color: #2b3a67;
-    font-weight: 600;
 }
 
 /* card */
 .sla {
-    width: 400px;
+    width: 480px; /* ou 500px se quiser mais espaçoso */
     background: #fff;
     padding: 30px;
     border-radius: 20px;
@@ -105,25 +106,22 @@ body {
 
 }
 
-/* cada campo */
-.campo {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 18px;
-}
 
-/* labels */
-.campo label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #444;
-}
 
 /* inputs */
 .campo input {
-    padding: 10px;
-    border-radius: 10px;
+    width: 100%;
+    display: block;
+    padding: 14px 16px; /* mais espaço interno */
+    font-size: 16px;    /* texto maior */
+    border-radius: 12px;
     border: 1px solid #ccc;
+}
+
+.campo input:focus {
+    border-color: #2b59ff;
+    box-shadow: 0 0 8px rgba(43, 89, 255, 0.3);
+    outline: none;
 }
 
 /* radios organizados */
@@ -178,3 +176,4 @@ body {
     transition: linear 2.25s;
     cursor: pointer;
 }
+

@@ -11,22 +11,39 @@
 </head>
 
 <body>
+
     <div class="menu-topo">
-        <img src="imagens/logo.png" alt="Logo do sistema" class="logo">
+        <img src="imagens/logo.png" class="logo">
         <a href="registro.php" class="link-sair">
-            <img src="imagens/sair.png" alt="Sair do sistema" class="sair">
+            <img src="imagens/sair.png" class="sair">
         </a>
     </div>
-    <h1 class="lgo">SEJA BEM-VINDO!</h1>
-    <hr>
-    <h1 class="log">SELECIONE SEU LOGIN</h1>
-    <div class="login-opcoes">
-        <a href="user.php"><img class="imagem" src="imagens/user2.png"></a>
-        <a href="adm.php"><img class="imagem" src="imagens/admi.png"></a>
+
+    <div class="container">
+
+        <h1>Bem-vindo</h1>
+        <p class="sub">Selecione como deseja entrar</p>
+
+        <div class="cards">
+
+            <a href="user.php" class="card">
+                <img src="imagens/user2.png">
+                <span>Usuário</span>
+            </a>
+
+            <a href="adm.php" class="card">
+                <img src="imagens/admi.png">
+                <span>Administrador</span>
+            </a>
+
+        </div>
+
+        <p class="footer">
+            Não tem conta? <a href="registro.php">Cadastre-se</a>
+        </p>
+
     </div>
 
-    <br>
-    <p style="text-align: center;">Não tem conta?<a href="registro.php">Cadastre-se aqui.</a></p>
 </body>
 
 </html>
