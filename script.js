@@ -5,13 +5,13 @@ let adm = document.getElementById("adm");
 
 if(cliente.checked){
 
-    window.location.href = "inicio.html";
+    window.location.href = "inicio.php";
 
 }
 
 else if(adm.checked){
 
-    window.location.href = "central_adm.html";
+    window.location.href = "central_adm.php";
 
 }
 
