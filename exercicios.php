@@ -18,10 +18,10 @@
         </h2>
 
         <ul class="nav-links">
-            <li><a href="inicio.html">Início</a></li>
-            <li><a href="servico.html">Serviços</a></li>
-            <li><a href="agendamento.html">Agendamentos</a></li>
-            <li class="active"><a href="exercicios.html">Exercícios</a></li>
+            <li><a href="inicio.php">Início</a></li>
+            <li><a href="servico.php">Serviços</a></li>
+            <li><a href="agendamento.php">Agendamentos</a></li>
+            <li class="active"><a href="exercicios.php">Exercícios</a></li>
             <li>
                 <a href="logout.php">
                     <img src="imagens/sair.png" alt="Sair" class="icon-sair">
@@ -47,28 +47,28 @@
                 <div class="icone-ex">🏋️‍♂️</div>
                 <h3>Agachamento Livre</h3>
                 <p>Nível: Intermediário</p>
-                <a href="detalhe-agachamento.html" class="btn-detalhe">Ver detalhes</a>
+                <a href="detalhe-agachamento.php" class="btn-detalhe">Ver detalhes</a>
             </div>
 
             <div class="card-exercicio">
                 <div class="icone-ex">💪</div>
                 <h3>Rosca Direta</h3>
                 <p>Nível: Iniciante</p>
-                <a href="detalhe-rosca.html" class="btn-detalhe">Ver detalhes</a>
+                <a href="detalhe-rosca.php" class="btn-detalhe">Ver detalhes</a>
             </div>
 
             <div class="card-exercicio">
                 <div class="icone-ex">🦵</div>
                 <h3>Leg Press</h3>
                 <p>Nível: Avançado</p>
-                <a href="detalhe-legpress.html" class="btn-detalhe">Ver detalhes</a>
+                <a href="detalhe-legpress.php" class="btn-detalhe">Ver detalhes</a>
             </div>
 
             <div class="card-exercicio">
                 <div class="icone-ex">🧘‍♂️</div>
                 <h3>Alongamento Lombar</h3>
                 <p>Nível: Iniciante</p>
-                <a href="detalhe-alogamento.html" class="btn-detalhe">Ver detalhes</a>
+                <a href="detalhe-alogamento.php" class="btn-detalhe">Ver detalhes</a>
             </div>
 
         </div>

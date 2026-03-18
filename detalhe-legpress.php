@@ -13,7 +13,7 @@
 
 <div class="container">
 
-<a href="exercicios.html" class="voltar">← Voltar</a>
+<a href="exercicios.php" class="voltar">← Voltar</a>
 
 <h1 class="titulo">Leg Press</h1>
 

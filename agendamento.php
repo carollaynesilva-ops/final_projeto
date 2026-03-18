@@ -18,10 +18,10 @@
         <!-- MENU -->
 
         <ul class="nav-links">
-            <li><a href="inicio.html">Início</a></li>
-            <li><a href="servico.html">Serviços</a></li>
-            <li class="active"><a href="agendamento.html">Agendamentos</a></li>
-            <li><a href="exercicios.html">Exercícios</a></li>
+            <li><a href="inicio.php">Início</a></li>
+            <li><a href="servico.php">Serviços</a></li>
+            <li class="active"><a href="agendamento.php">Agendamentos</a></li>
+            <li><a href="exercicios.php">Exercícios</a></li>
             <li>
                 <a href="logout.php">
                     <img src="imagens/sair.png" alt="Sair" class="icon-sair">
@@ -47,7 +47,7 @@
     </div>
 
     <div id="btn2">
-        <a href="agendar.html"><button class="bnt">AGENDAR CONSULTA</button></a>
+        <a href="agendar.php"><button class="bnt">AGENDAR CONSULTA</button></a>
     </div>
      <div class="container-central">
         <div class="tratamentos" id="reabilitacao">

@@ -12,7 +12,7 @@
 <body>
     <div class="menu-topo">
          <img src="imagens/logo.png" alt="Logo do sistema" class="logo">
-          <a href="decisao.html" class="link-sair">
+          <a href="decisao.php" class="link-sair">
             <img src="imagens/sair.png" alt="Sair do sistema" class="sair">
         </a>
     </div>
@@ -38,8 +38,8 @@
         </div>
         </form>
 
-        <p>Não tem conta?<a href="registro.html">Cadastre-se aqui.</a></p>
-        <p>Não é adm?<a href="decisao.html">Mude aqui.</a></p>
+        <p>Não tem conta?<a href="registro.php">Cadastre-se aqui.</a></p>
+        <p>Não é adm?<a href="decisao.php">Mude aqui.</a></p>
     </div>
 
 </body>

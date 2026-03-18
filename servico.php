@@ -18,10 +18,10 @@
         <!-- MENU -->
 
         <ul class="nav-links">
-            <li><a href="inicio.html">Início</a></li>
-            <li class="active"><a href="servico.html">Serviços</a></li>
-            <li><a href="agendamento.html">Agendamentos</a></li>
-            <li><a href="exercicios.html">Exercícios</a></li>
+            <li><a href="inicio.php">Início</a></li>
+            <li class="active"><a href="servico.php">Serviços</a></li>
+            <li><a href="agendamento.php">Agendamentos</a></li>
+            <li><a href="exercicios.php">Exercícios</a></li>
             <li>
                 <a href="logout.php">
                     <img src="imagens/sair.png" alt="Sair" class="icon-sair">

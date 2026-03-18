@@ -18,10 +18,10 @@
         </h2>
 
         <ul class="nav-links">
-            <li class="active"><a href="central_adm.html">Início</a></li>
-            <li><a href="agendamento_adm.html">Consultas</a></li>
+            <li class="active"><a href="central_adm.php">Início</a></li>
+            <li><a href="agendamento_adm.php">Consultas</a></li>
             <li>
-                <a href="decisao.html">
+                <a href="decisao.php">
                     <img src="imagens/sair.png" alt="Sair" class="icon-sair">
                 </a>
             </li>
@@ -37,7 +37,7 @@
       <h4 class="titulo-central">Veja suas próximas consultas</h4>
 
       <div class="megalofobia">
-      <a href="agendamento_adm.html"><button class="botsao">Ver Consultas</button></a>
+      <a href="agendamento_adm.php"><button class="botsao">Ver Consultas</button></a>
       </div>
 
       <div class="exercicios-container">

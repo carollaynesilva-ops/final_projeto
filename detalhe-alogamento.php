@@ -12,7 +12,7 @@
 
 <div class="container">
 
-<a href="exercicios.html" class="voltar">← Voltar</a>
+<a href="exercicios.php" class="voltar">← Voltar</a>
 
 <h1 class="titulo">Alongamento Lombar</h1>
 
