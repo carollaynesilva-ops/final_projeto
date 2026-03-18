@@ -13,8 +13,8 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-         <h2 class="logo">
-            <img src="imagens/logo.png" alt="Logo do sistema" class="logo">
+        <h2 class="logo">
+            <a href="perfil_adm.php"><img src="imagens/logo.png" alt="Logo do sistema" class="logo"></a>
         </h2>
 
         <ul class="nav-links">
@@ -28,19 +28,19 @@
         </ul>
 
         <div class="profile">
-            <a href="perfil.php">
+            <a href="perfil_adm.php">
                 <img src="imagens/admi.png" foto do adm>
             </a>
         </div>
     </nav>
-      <h2 class="titulo-central">Olá Doutor!</h2>
-      <h4 class="titulo-central">Veja suas próximas consultas</h4>
+    <h2 class="titulo-central">Olá Doutor!</h2>
+    <h4 class="titulo-central">Veja suas próximas consultas</h4>
 
-      <div class="megalofobia">
-      <a href="agendamento_adm.php"><button class="botsao">Ver Consultas</button></a>
-      </div>
+    <div class="megalofobia">
+        <a href="agendamento_adm.php"><button class="botsao">Ver Consultas</button></a>
+    </div>
 
-      <div class="exercicios-container">
+    <div class="exercicios-container">
         <h2 class="titulo-exercicios">Auxílio ao Doutor</h2>
 
         <div class="grid-exercicios">
@@ -49,16 +49,16 @@
                 <div class="icone-ex">🏥</div>
                 <h3>Prevenção de Lesão</h3>
                 <br>
-                <a href="https://intranet.ebserh.gov.br/sites/default/files/produtos-de-conhecimento/2025-05/POP.CSP_.005%20Preven%C3%A7%C3%A3o%20de%20les%C3%A3o%20por%20press%C3%A3o%20v.4.pdf" 
-                target="_blank" class="btn-detalhe">Ver detalhes</a>
+                <a href="https://intranet.ebserh.gov.br/sites/default/files/produtos-de-conhecimento/2025-05/POP.CSP_.005%20Preven%C3%A7%C3%A3o%20de%20les%C3%A3o%20por%20press%C3%A3o%20v.4.pdf"
+                    target="_blank" class="btn-detalhe">Ver detalhes</a>
             </div>
 
             <div class="card-exercicio">
                 <div class="icone-ex">💪</div>
                 <h3>Reabilitação Esportiva</h3>
                 <br>
-                <a href="https://fiquepordentro.ensinoeinstein.com/o-papel-da-fisioterapia-esportiva-na-prevencao-e-tratamento-de-lesoes/" 
-                target="_blank" class="btn-detalhe">Ver detalhes</a>
+                <a href="https://fiquepordentro.ensinoeinstein.com/o-papel-da-fisioterapia-esportiva-na-prevencao-e-tratamento-de-lesoes/"
+                    target="_blank" class="btn-detalhe">Ver detalhes</a>
             </div>
 
             <div class="card-exercicio">
@@ -80,6 +80,6 @@
 
 
 
-    </body>
+</body>
 
 </html>
