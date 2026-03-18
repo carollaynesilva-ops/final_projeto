@@ -4,8 +4,8 @@ $mensagem = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $host = "localhost";
     $user = "root";
-    $senha = "";
-    $banco = "fisioterapia";
+    $senha = "mysql";
+    $banco = "almafisio";
 
     $conn = new mysqli($host, $user, $senha, $banco);
 
