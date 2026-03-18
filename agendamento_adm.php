@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$senha = "";
+$senha = "mysql";
 $banco = "fisioterapia";
 
 $conn = new mysqli($host, $user, $senha, $banco);
