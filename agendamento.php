@@ -32,7 +32,7 @@
         <!-- FOTO USUÀRIO -->
 
         <div class="profile">
-            <a href="perfil_cliente.php">
+            <a href="perfil.php">
                 <img src="imagens/user2.png" alt="foto do usuário">
                 <!-- <span>Perfil</span> -->
             </a>

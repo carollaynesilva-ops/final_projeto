@@ -28,7 +28,6 @@
                 </a>
             </li>
         </ul>
-
         <div class="profile">
             <a href="perfil_cliente.php">
                 <img src="imagens/user2.png" alt="foto do usuário">
