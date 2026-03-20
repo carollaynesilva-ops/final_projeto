@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Autenticação - ADM</title>
     <link rel="stylesheet" href="style5.css">
+    <link rel="shortcut icon" href="imagens/logo.png">
 </head>
 
 <body>

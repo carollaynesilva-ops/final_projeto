@@ -1,0 +1,127 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Fundo */
+body {
+    margin: 0;
+    background: radial-gradient(circle at top left,
+            rgba(255, 255, 255, 0.7) 0%,
+            transparent 40%),
+        linear-gradient(135deg,
+            #b9d9ff 0%,
+            #cce3ff 50%,
+            #a1cdff 100%);
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.15);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0646a6;
+}
+
+/* Botão voltar */
+.btn-voltar {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #0b5ed7;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Cabeçalho */
+th {
+    background: #0049b8;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Células */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e3eaf2;
+    font-size: 14px;
+}
+
+/* Linhas alternadas */
+tr:nth-child(even) {
+    background: #f4f9fd;
+}
+
+/* Hover */
+tr:hover {
+    background: #e1f0ff;
+    transition: 0.2s;
+}
+
+/* Observações */
+td:last-child {
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+/* Botão CSV */
+a button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 25px;
+    background: #21a6ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+a{
+    text-decoration: none;
+}
+/* Hover CSV */
+a button:hover {
+    background: #0056b9;
+}
+
+/* Mensagem */
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #0d6efd;
+}

@@ -16,6 +16,7 @@ $usuario = $_SESSION["usuario"];
 <title>Perfil Cliente</title>
 <link rel="stylesheet" href="perfil.css">
 <link rel="shortcut icon" href="imagens/logo.png">
+
 </head>
 
 <body>

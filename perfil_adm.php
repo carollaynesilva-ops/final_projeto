@@ -16,6 +16,7 @@ $usuario = $_SESSION["usuario"];
     <meta charset="UTF-8">
     <title>Perfil ADM</title>
     <link rel="stylesheet" href="perfil.css">
+    <link rel="shortcut icon" href="imagens/logo.png">
 </head>
 
 <body>

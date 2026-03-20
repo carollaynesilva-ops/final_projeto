@@ -2,60 +2,62 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alongamento Lombar</title>
-<link rel="stylesheet" href="style3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alongamento Lombar</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="shortcut icon" href="imagens/logo.png">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<a href="exercicios.php" class="voltar">← Voltar</a>
+        <a href="exercicios.php" class="voltar">← Voltar</a>
 
-<h1 class="titulo">Alongamento Lombar</h1>
+        <h1 class="titulo">Alongamento Lombar</h1>
 
-<div class="video-box">
-<img src="https://via.placeholder.com/600x350" alt="Demonstração do Alongamento Lombar">
-</div>
+        <div class="video-box">
+            <img src="https://via.placeholder.com/600x350" alt="Demonstração do Alongamento Lombar">
+        </div>
 
-<div class="info-card">
-<h2>Descrição</h2>
-<p>O alongamento lombar ajuda a aliviar tensões na parte inferior das costas, reduzir dores e aumentar a mobilidade da coluna. É ideal para pessoas que passam longos períodos sentadas ou com rigidez na lombar.</p>
-</div>
+        <div class="info-card">
+            <h2>Descrição</h2>
+            <p>O alongamento lombar ajuda a aliviar tensões na parte inferior das costas, reduzir dores e aumentar a mobilidade da coluna. É ideal para pessoas que passam longos períodos sentadas ou com rigidez na lombar.</p>
+        </div>
 
-<div class="info-card">
-<h2>Músculos trabalhados</h2>
-<ul>
-<li>Músculos paravertebrais</li>
-<li>Glúteo máximo</li>
-<li>Lombar</li>
-<li>Quadrado lombar</li>
-</ul>
-</div>
+        <div class="info-card">
+            <h2>Músculos trabalhados</h2>
+            <ul>
+                <li>Músculos paravertebrais</li>
+                <li>Glúteo máximo</li>
+                <li>Lombar</li>
+                <li>Quadrado lombar</li>
+            </ul>
+        </div>
 
-<div class="info-card">
-<h2>Passo a passo</h2>
-<ol>
-<li>Deite-se de costas no chão ou colchonete.</li>
-<li>Traga lentamente os joelhos em direção ao peito.</li>
-<li>Abrace as pernas suavemente.</li>
-<li>Mantenha a lombar relaxada no chão.</li>
-<li>Segure a posição por 20–30 segundos enquanto respira fundo.</li>
-</ol>
-</div>
+        <div class="info-card">
+            <h2>Passo a passo</h2>
+            <ol>
+                <li>Deite-se de costas no chão ou colchonete.</li>
+                <li>Traga lentamente os joelhos em direção ao peito.</li>
+                <li>Abrace as pernas suavemente.</li>
+                <li>Mantenha a lombar relaxada no chão.</li>
+                <li>Segure a posição por 20–30 segundos enquanto respira fundo.</li>
+            </ol>
+        </div>
 
-<div class="info-card">
-<h2>Prescrição</h2>
-<p><strong>Duração:</strong> 20–30 segundos</p>
-<p><strong>Repetições:</strong> 2–3 vezes</p>
-<p><strong>Frequência:</strong> Diariamente</p>
-</div>
+        <div class="info-card">
+            <h2>Prescrição</h2>
+            <p><strong>Duração:</strong> 20–30 segundos</p>
+            <p><strong>Repetições:</strong> 2–3 vezes</p>
+            <p><strong>Frequência:</strong> Diariamente</p>
+        </div>
 
-<a href="https://www.youtube.com/watch?v=Hpq3AyG-OAE"><button class="btn-executar">Começar exercício</button></a>
+        <a href="https://www.youtube.com/watch?v=Hpq3AyG-OAE"><button class="btn-executar">Começar exercício</button></a>
 
-</div>
+    </div>
 
 </body>
+
 </html>
