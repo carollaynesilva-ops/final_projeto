@@ -1,18 +1,19 @@
 <?php
+session_start();
+include("conexao.php"); // Usando sua conexão centralizada
+
+// Verifica se está logado
+if (!isset($_SESSION["usuario"])) {
+    header("Location: user.php");
+    exit();
+}
+
 $mensagem = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $host = "localhost";
-    $user = "root";
-    $senha = "mysql";
-    $banco = "almafisio";
-
-    $conn = new mysqli($host, $user, $senha, $banco);
-
-    if ($conn->connect_error) {
-        die("Erro na conexão: " . $conn->connect_error);
-    }
-
+    // Pegamos o ID diretamente da sessão que você criou no login
+    $usuario_id = $_SESSION["usuario"]; 
+    
     $servico = $_POST['servico'];
     $data = $_POST['data'];
     $hora = $_POST['hora'];
@@ -21,9 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST['telefone'];
     $observacoes = $_POST['observacoes'];
 
-    /* =========================
-       VERIFICAR SE JÁ EXISTE AGENDAMENTO
-    ========================= */
+    // Verificar se já existe agendamento no mesmo horário
     $verifica = $conn->prepare("SELECT id FROM agendamentos WHERE data_consulta = ? AND hora_consulta = ?");
     $verifica->bind_param("ss", $data, $hora);
     $verifica->execute();
@@ -32,24 +31,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($verifica->num_rows > 0) {
         $mensagem = "Este horário já está ocupado. Escolha outro.";
     } else {
-
-        /* =========================
-           INSERIR AGENDAMENTO
-        ========================= */
-        $stmt = $conn->prepare("INSERT INTO agendamentos (servico, data_consulta, hora_consulta, nome, email, telefone, observacoes) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssssss", $servico, $data, $hora, $nome, $email, $telefone, $observacoes);
+        // INSERIR COM O ID DO USUÁRIO LOGADO
+        $stmt = $conn->prepare("INSERT INTO agendamentos (usuario_id, servico, data_consulta, hora_consulta, nome, email, telefone, observacoes) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("isssssss", $usuario_id, $servico, $data, $hora, $nome, $email, $telefone, $observacoes);
 
         if ($stmt->execute()) {
             $mensagem = "Consulta agendada com sucesso!";
         } else {
             $mensagem = "Erro ao agendar consulta.";
         }
-
         $stmt->close();
     }
-
     $verifica->close();
-    $conn->close();
 }
 ?>
 
