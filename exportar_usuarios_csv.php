@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 $host = "localhost";
 $user = "root";
 $senha = "mysql";
@@ -10,50 +12,37 @@ if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
 }
 
-// Define o nome do arquivo que será baixado
+$conn->set_charset("utf8");
+
 $nome_arquivo = "relatorio_usuarios_" . date("Y-m-d_H-i-s") . ".csv";
 
-// Cabeçalhos para forçar o download do CSV
-header('Content-Type: text/csv; charset=utf-8');
-header('Content-Disposition: attachment; filename=' . $nome_arquivo);
+header("Content-Type: text/csv; charset=UTF-8");
+header("Content-Disposition: attachment; filename=\"$nome_arquivo\"");
+header("Pragma: no-cache");
+header("Expires: 0");
 
-// Abre a saída
-$saida = fopen('php://output', 'w');
+$saida = fopen("php://output", "w");
 
-// BOM para corrigir acentos no Excel
-fprintf($saida, chr(0xEF).chr(0xBB).chr(0xBF));
+// BOM para o Excel reconhecer acentos
+fprintf($saida, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
-// Consulta os dados da tabela usuario
-$sql = "SELECT * FROM usuario";
+// TROQUE os nomes das colunas conforme a sua tabela usuario
+$sql = "SELECT id, nome, email FROM usuario";
 $resultado = $conn->query($sql);
 
-if ($resultado && $resultado->num_rows > 0) {
-    
-    // Pega os nomes das colunas automaticamente
-    $campos = $resultado->fetch_fields();
-    $cabecalho = [];
+if (!$resultado) {
+    die("Erro na consulta: " . $conn->error);
+}
 
-    foreach ($campos as $campo) {
-        $cabecalho[] = $campo->name;
-    }
+// Cabeçalho da planilha
+fputcsv($saida, ["ID", "Nome", "Email"], ";");
 
-    // Escreve o cabeçalho no CSV
-    fputcsv($saida, $cabecalho, ';');
-
-    // Volta para o início dos resultados
-    $resultado->data_seek(0);
-
-    // Escreve os dados
-    while ($linha = $resultado->fetch_assoc()) {
-        fputcsv($saida, $linha, ';');
-    }
-
-} else {
-    // Caso não tenha dados
-    fputcsv($saida, ['Nenhum usuário encontrado'], ';');
+// Dados
+while ($linha = $resultado->fetch_assoc()) {
+    fputcsv($saida, $linha, ";");
 }
 
 fclose($saida);
 $conn->close();
+ob_end_flush();
 exit;
-?>
