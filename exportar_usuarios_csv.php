@@ -27,7 +27,7 @@ $saida = fopen("php://output", "w");
 fprintf($saida, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
 // TROQUE os nomes das colunas conforme a sua tabela usuario
-$sql = "SELECT id, nome, email FROM usuario";
+$sql = "SELECT id, nome_usuario, email, cargo, senha, telefone FROM usuarios";
 $resultado = $conn->query($sql);
 
 if (!$resultado) {
