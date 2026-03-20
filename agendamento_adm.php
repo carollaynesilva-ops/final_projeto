@@ -53,6 +53,10 @@ if (!$result) {
     <?php endif; ?>
 </div>
 
+<a href="exportar_usuarios_csv.php">
+    <button type="button">Baixar relatório CSV</button>
+</a>
+
 </body>
 </html>
 

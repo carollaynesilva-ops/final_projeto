@@ -90,7 +90,7 @@ $result = $conn->query($sql);
                 <th>Email</th>
                 <th>Telefone</th>
                 <th>Observações</th>
-                <th>Ações</th>
+                
             </tr>
 
             <?php while($row = $result->fetch_assoc()): ?>
@@ -103,12 +103,7 @@ $result = $conn->query($sql);
                     <td><?php echo htmlspecialchars($row['telefone']); ?></td>
                     <td><?php echo htmlspecialchars($row['observacoes']); ?></td>
                     
-                    <td>
-                       <button> <a href="?excluir=<?php echo $row['id']; ?>" 
-                           onclick="return confirm('Tem certeza que deseja excluir este agendamento?');">
-                           Excluir
-                        </a></button>
-                    </td>
+                    
                 </tr>
             <?php endwhile; ?>
         </table>
