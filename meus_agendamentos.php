@@ -56,19 +56,7 @@ $result = $stmt->get_result();
     <title>Meus Agendamentos</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="shortcut icon" href="imagens/logo.png">
-    <style>
-        .btn-excluir {
-            background-color: #ff4d4d;
-            color: white;
-            padding: 5px 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 12px;
-        }
-        .btn-excluir:hover {
-            background-color: #cc0000;
-        }
-    </style>
+    <script src="script.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -111,7 +99,7 @@ $result = $stmt->get_result();
                         <a href="meus_agendamentos.php?excluir=<?php echo $row['id']; ?>" 
                            class="btn-excluir" 
                            onclick="return confirm('Tem certeza que deseja desmarcar esta consulta?')">
-                           Desmarcar
+                           Excluir
                         </a>
                     </td>
                 </tr>
