@@ -6,6 +6,7 @@
     <title>Almafisio - Registro</title>
     <link rel="stylesheet" href="style5.css">
     <link rel="shortcut icon" href="imagens/logo.png">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="menu-topo">
@@ -47,7 +48,7 @@
             </div>
         </div>
 
-        <button type="submit" id="bt">Criar Conta</button>
+        <button type="submit" onclick="verificarCargo()" id="bt">Criar Conta</button>
 
         <p>Já tem uma conta? <a href="decisao.php">Entrar</a></p>
     </form>

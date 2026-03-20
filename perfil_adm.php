@@ -29,7 +29,7 @@ $usuario = $_SESSION["usuario"];
         <p><strong>Tipo:</strong> Administrador</p>
     </div>
 
-    <a href="logout.php" class="btn">Sair</a>
+    <a href="central_adm.php" class="btn">CONTINUAR</a>
 
 </div>
 
