@@ -15,6 +15,7 @@ $usuario = $_SESSION["usuario"];
 <meta charset="UTF-8">
 <title>Perfil Cliente</title>
 <link rel="stylesheet" href="perfil.css">
+<link rel="shortcut icon" href="imagens/logo.png">
 </head>
 
 <body>
@@ -29,7 +30,7 @@ $usuario = $_SESSION["usuario"];
         <p><strong>Tipo:</strong> Cliente</p>
     </div>
 
-    <a href="logout.php" class="btn">Sair</a>
+    <a href="inicio.php" class="btn">CONTINUAR</a>
 
 </div>
 

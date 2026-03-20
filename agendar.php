@@ -21,16 +21,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST['telefone'];
     $observacoes = $_POST['observacoes'];
 
-    $stmt = $conn->prepare("INSERT INTO agendamentos (servico, data_consulta, hora_consulta, nome, email, telefone, observacoes) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssss", $servico, $data, $hora, $nome, $email, $telefone, $observacoes);
+    /* =========================
+       VERIFICAR SE JÁ EXISTE AGENDAMENTO
+    ========================= */
+    $verifica = $conn->prepare("SELECT id FROM agendamentos WHERE data_consulta = ? AND hora_consulta = ?");
+    $verifica->bind_param("ss", $data, $hora);
+    $verifica->execute();
+    $verifica->store_result();
 
-    if ($stmt->execute()) {
-        $mensagem = "Consulta agendada com sucesso!";
+    if ($verifica->num_rows > 0) {
+        $mensagem = "Este horário já está ocupado. Escolha outro.";
     } else {
-        $mensagem = "Erro ao agendar consulta.";
+
+        /* =========================
+           INSERIR AGENDAMENTO
+        ========================= */
+        $stmt = $conn->prepare("INSERT INTO agendamentos (servico, data_consulta, hora_consulta, nome, email, telefone, observacoes) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssss", $servico, $data, $hora, $nome, $email, $telefone, $observacoes);
+
+        if ($stmt->execute()) {
+            $mensagem = "Consulta agendada com sucesso!";
+        } else {
+            $mensagem = "Erro ao agendar consulta.";
+        }
+
+        $stmt->close();
     }
 
-    $stmt->close();
+    $verifica->close();
     $conn->close();
 }
 ?>
@@ -39,13 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style4.css">
+    <link rel="shortcut icon" href="imagens/logo.png">
     <title>Agendar Consulta</title>
-
-
 </head>
 
 <body>
@@ -55,71 +71,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="imagens/logo.png" alt="Logo do sistema" class="logo">
         </h2>
 
-        <!-- MENU -->
-
         <ul class="nav-links">
             <li><a href="inicio.php">Início</a></li>
             <li><a href="servico.php">Serviços</a></li>
             <li class="active"><a href="agendamento.php">Agendamentos</a></li>
             <li><a href="exercicios.php">Exercícios</a></li>
             <li>
-                <a href="logout.php">
+                <a href="agendamento.php">
                     <img src="imagens/sair.png" alt="Sair" class="icon-sair">
                 </a>
             </li>
         </ul>
 
-        <!-- FOTO USUÀRIO -->
-
         <div class="profile">
             <a href="perfil.php">
                 <img src="imagens/user2.png" alt="foto do usuário">
-                <!-- <span>Perfil</span> -->
             </a>
-
         </div>
     </nav>
-
 
     <div class="container">
 
         <h1>Agendar Consulta</h1>
 
-        <?php
-        if ($mensagem != "") {
-            echo "<div class='msg'>$mensagem</div>";
-        }
-        ?>
+        <?php if ($mensagem != ""): ?>
+            <div class="msg"><?php echo $mensagem; ?></div>
+        <?php endif; ?>
 
         <form method="POST">
 
             <label>Escolha o serviço</label>
 
             <select name="servico" required>
-
                 <option value="">Selecione um serviço</option>
-
-                <option value="Reabilitação Esportiva">
-                    Reabilitação Esportiva - R$180
-                </option>
-
-                <option value="Recovery Pós-Treino">
-                    Recovery Pós-Treino - R$120
-                </option>
-
-                <option value="Osteopatia">
-                    Osteopatia - R$220
-                </option>
-
-                <option value="Prevenção de Lesão">
-                    Prevenção de Lesão - R$150
-                </option>
-
+                <option value="Reabilitação Esportiva">Reabilitação Esportiva - R$180</option>
+                <option value="Recovery Pós-Treino">Recovery Pós-Treino - R$120</option>
+                <option value="Osteopatia">Osteopatia - R$220</option>
+                <option value="Prevenção de Lesão">Prevenção de Lesão - R$150</option>
             </select>
 
-
             <div class="row">
-
                 <div>
                     <label>Data</label>
                     <input type="date" name="data" required>
@@ -129,16 +120,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label>Hora</label>
                     <input type="time" name="hora" required>
                 </div>
-
             </div>
-
 
             <label>Nome completo</label>
             <input type="text" name="nome" required>
 
-
             <div class="row">
-
                 <div>
                     <label>Email</label>
                     <input type="email" name="email" required>
@@ -148,18 +135,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label>Telefone</label>
                     <input type="tel" name="telefone" required>
                 </div>
-
             </div>
-
 
             <label>Observações</label>
             <textarea name="observacoes"></textarea>
 
-
             <button type="submit">
-
                 Confirmar Agendamento
-
             </button>
 
         </form>

@@ -23,14 +23,14 @@
             <li><a href="agendamento.php">Agendamentos</a></li>
             <li><a href="exercicios.php">Exercícios</a></li>
             <li>
-                <a href="logout.php">
+                <a href="decisao.php">
                     <img src="imagens/sair.png" alt="Sair" class="icon-sair">
                 </a>
             </li>
         </ul>
 
         <div class="profile">
-            <a href="perfil.php">
+            <a href="perfil_cliente.php">
                 <img src="imagens/user2.png" alt="foto do usuário">
                 <!-- <span>Perfil</span> -->
             </a>

@@ -23,7 +23,7 @@
             <li><a href="agendamento.php">Agendamentos</a></li>
             <li><a href="exercicios.php">Exercícios</a></li>
             <li>
-                <a href="logout.php">
+                <a href="inicio.php">
                     <img src="imagens/sair.png" alt="Sair" class="icon-sair">
                 </a>
             </li>
@@ -32,7 +32,7 @@
         <!-- FOTO USUÀRIO -->
 
         <div class="profile">
-            <a href="perfil.php">
+            <a href="perfil_cliente.php">
                 <img src="imagens/user2.png" alt="foto do usuário">
                 <!-- <span>Perfil</span> -->
             </a>
@@ -54,28 +54,29 @@
             <h3>Reabilitação Esportiva</h3>
             <h4>Sessões personalizadas de 50 minutos.</h4>
             <h3>R$ 180</h3>
-            <a href=""><button>Mais Informações</button></a>
+            <a href="https://www.drandrekirihara.com.br/reabilitacao-esportiva" target="_blank"><button>Mais Informações</button></a>
         </div>
 
         <div class="tratamentos" id="recovery">
             <h3>Recovery Pós-Treino</h3>
             <h4>Sessões personalizadas de 50 minutos.</h4>
             <h3>R$ 120</h3>
-            <a href=""><button>Mais Informações</button></a>
+            <a href="https://www.reactive.com.br/artigos/esportes/o-que-e-recovery/" target="_blank"><button>Mais Informações</button></a>
         </div>
 
         <div class="tratamentos" id="osteopatia">
             <h3>Osteopatia</h3>
             <h4>Sessões personalizadas de 50 minutos.</h4>
             <h3>R$ 220</h3>
-            <a href=""></a><button>Mais Informações</button></a>
+            <a href="https://www.lusiadas.pt/blog/prevencao-estilo-vida/bem-estar/que-para-que-serve-osteopatia" target="_blank"><button>Mais Informações</button></a>
         </div>
 
         <div class="tratamentos" id="prevencao">
             <h3>Prevenção de Lesão</h3>
             <h4>Sessões personalizadas de 50 minutos.</h4>
             <h3>R$ 150</h3>
-            <a href=""><button>Mais Informações</button></a>
+            <a href="https://intranet.ebserh.gov.br/sites/default/files/produtos-de-conhecimento/2025-05/POP.CSP_.005%20Preven%C3%A7%C3%A3o%20de%20les%C3%A3o%20por%20press%C3%A3o%20v.4.pdf" 
+            target="_blank"><button>Mais Informações</button></a>
         </div>
 
     </div>
