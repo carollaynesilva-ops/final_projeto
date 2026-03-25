@@ -23,18 +23,32 @@ $usuario = $_SESSION["usuario"];
 
     <div class="perfil">
 
-        <h2>⚙️ Painel ADM</h2>
-
-        <div class="card">
-            <p><strong>Email:</strong> <?php echo $usuario["email"]; ?></p>
-            <p><strong>Telefone:</strong> <?php echo $usuario["telefone"]; ?></p>
-            <p><strong>Tipo:</strong> Administrador</p>
+        <div class="header">
+            <div class="avatar">⚙️</div>
+            <h2>Painel ADM</h2>
+            <span class="sub">Área administrativa</span>
         </div>
 
-        <a href="central_adm.php" class="btn">CONTINUAR</a>
+        <div class="card">
+            <div class="info">
+                <span>Email</span>
+                <p><?php echo $usuario["email"]; ?></p>
+            </div>
+
+            <div class="info">
+                <span>Telefone</span>
+                <p><?php echo $usuario["telefone"]; ?></p>
+            </div>
+
+            <div class="info">
+                <span>Tipo</span>
+                <p>Administrador</p>
+            </div>
+        </div>
+
+        <a href="central_adm.php" class="btn">Continuar</a>
 
     </div>
-
 </body>
 
 </html>
