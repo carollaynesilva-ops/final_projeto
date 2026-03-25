@@ -13,7 +13,7 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-         <h2 class="logo">
+        <h2 class="logo">
             <img src="imagens/logo.png" alt="Logo do sistema" class="logo">
         </h2>
 
