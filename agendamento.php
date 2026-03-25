@@ -43,7 +43,7 @@
     <!-- NOSSOS TRATAMENTOS -->
 
     <div class="centro">
-        <h1>AGENDAMENTOS</h1>
+        <h1>Agendamentos</h1>
     </div>
 
      <div class="container-central">

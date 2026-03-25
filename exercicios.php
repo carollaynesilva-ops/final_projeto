@@ -39,7 +39,7 @@
 
     <!-- CONTEÚDO EXERCÍCIOS -->
     <div class="exercicios-container">
-        <h2 class="titulo-exercicios">Exercícios</h2>
+        <h1 class="titulo-exercicios">Exercícios</h1>
 
         <div class="grid-exercicios">
 
