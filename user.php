@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <title>Autenticação - Cliente</title>
     <link rel="stylesheet" href="css/style5.css">
+    <link rel="shortcut icon" href="imagens/logo_.png">
 </head>
+
 <body>
 
     <div class="menu-topo">
@@ -48,4 +50,5 @@
     </div>
 
 </body>
+
 </html>

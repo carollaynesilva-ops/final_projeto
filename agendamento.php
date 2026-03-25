@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style2.css">
-    <link rel="shortcut icon" href="imagens/logo.png">
+    <link rel="shortcut icon" href="imagens/logo_.png">
 </head>
 
 <body>
