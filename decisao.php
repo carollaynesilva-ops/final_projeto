@@ -21,8 +21,8 @@
 
     <div class="container">
 
-        <h1>Bem-vindo</h1>
-        <p class="sub">Selecione como deseja entrar</p>
+        <h1>Bem-vindo(a) a AlmaFisio!</h1>
+        <p class="sub">Selecione como deseja acessar</p>
 
         <div class="cards">
 

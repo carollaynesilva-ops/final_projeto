@@ -46,10 +46,6 @@
         <h1>AGENDAMENTOS</h1>
     </div>
 
-    <div id="btn2">
-        <a href="agendar.php"><button class="bnt">AGENDAR CONSULTA</button></a>
-        <a href="meus_agendamentos.php"><button class="bnt">MEUS AGENDAMENTOS</button></a>
-    </div>
      <div class="container-central">
         <div class="tratamentos" id="reabilitacao">
             <h3>Reabilitação Esportiva</h3>
@@ -79,6 +75,16 @@
             <a href="https://www.youtube.com/watch?v=UqEgKe9jWME" target="_blank"><button>Mais Informações</button></a>
         </div>
 
+    </div>
+
+    <br>
+    <br>
+
+    <!-- BOTÕES PARA AGENDAMENTO -->
+     
+    <div id="btn2">
+        <a href="agendar.php"><button class="bnt">AGENDAR CONSULTA</button></a>
+        <a href="meus_agendamentos.php"><button class="bnt">MEUS AGENDAMENTOS</button></a>
     </div>
 
 
