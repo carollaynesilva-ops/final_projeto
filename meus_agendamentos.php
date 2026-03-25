@@ -50,6 +50,7 @@ $result = $stmt->get_result();
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,6 +59,7 @@ $result = $stmt->get_result();
     <link rel="shortcut icon" href="imagens/logo.png">
     <script src="script.js"></script>
 </head>
+
 <body>
     <nav class="navbar">
         <h2 class="logo"><img src="imagens/logo.png" alt="Logo" class="logo"></h2>
@@ -66,51 +68,56 @@ $result = $stmt->get_result();
             <li><a href="servico.php">Serviços</a></li>
             <li class="active"><a href="agendamento.php">Agendamentos</a></li>
             <li><a href="exercicios.php">Exercícios</a></li>
-            <li><a href="inicio.php"><img src="imagens/sair.png" alt="Sair" class="icon-sair"></a></li>
+            <li><a href="agendamento.php"><img src="imagens/sair.png" alt="Sair" class="icon-sair"></a></li>
         </ul>
         <div class="profile">
             <a href="perfil_cliente.php"><img src="imagens/user2.png" alt="foto"></a>
         </div>
     </nav>
 
-<div class="container">
-    <h1>Meus Agendamentos</h1>
+    <div class="container">
 
-    <?php if (isset($_GET['sucesso'])): ?>
-        <p style="color: #00ff00; text-align: center;">Agendamento excluído com sucesso!</p>
-    <?php endif; ?>
+        <?php if (isset($_GET['sucesso'])): ?>
+            <p style="color: #00ff00; text-align: center;">Agendamento excluído com sucesso!</p>
+        <?php endif; ?>
 
-    <?php if ($result->num_rows > 0): ?>
-        <table border="1" cellpadding="10" cellspacing="0" width="100%">
-            <tr>
-                <th>Serviço</th>
-                <th>Data</th>
-                <th>Hora</th>
-                <th>Observações</th>
-                <th>Ações</th> </tr>
+        <div class="contai">
+            <h1 style="text-align: center;">Meus Agendamentos</h1>
+            <button class="btn-voltar" onclick="history.back()">← Voltar</button>
+            <?php if ($result->num_rows > 0): ?>
+                <table border="1" cellpadding="10" cellspacing="0" width="100%">
+                    <tr>
+                        <th>Serviço</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Observações</th>
+                        <th>Ações</th>
+                    </tr>
 
-            <?php while($row = $result->fetch_assoc()): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($row['servico']); ?></td>
-                    <td><?php echo htmlspecialchars($row['data_consulta']); ?></td>
-                    <td><?php echo htmlspecialchars($row['hora_consulta']); ?></td>
-                    <td><?php echo htmlspecialchars($row['observacoes']); ?></td>
-                    <td>
-                        <a href="meus_agendamentos.php?excluir=<?php echo $row['id']; ?>" 
-                           class="btn-excluir" 
-                           onclick="return confirm('Tem certeza que deseja desmarcar esta consulta?')">
-                           Excluir
-                        </a>
-                    </td>
-                </tr>
-            <?php endwhile; ?>
-        </table>
-    <?php else: ?>
-        <p>Nenhum agendamento encontrado.</p>
-    <?php endif; ?>
-</div>
+                    <?php while ($row = $result->fetch_assoc()): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($row['servico']); ?></td>
+                            <td><?php echo htmlspecialchars($row['data_consulta']); ?></td>
+                            <td><?php echo htmlspecialchars($row['hora_consulta']); ?></td>
+                            <td><?php echo htmlspecialchars($row['observacoes']); ?></td>
+                            <td>
+                                <a href="meus_agendamentos.php?excluir=<?php echo $row['id']; ?>"
+                                    class="btn-excluir"
+                                    onclick="return confirm('Tem certeza que deseja desmarcar esta consulta?')">
+                                    Excluir
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+                </table>
+            <?php else: ?>
+                <p style="text-align: center;">Nenhum agendamento encontrado.</p>
+            <?php endif; ?>
+        </div>
+    </div>    
 
 </body>
+
 </html>
 <?php
 $stmt->close();

@@ -357,3 +357,54 @@ body {
 .btn-excluir:hover {
     background-color: #cc0000;
 }
+
+.contai{
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.15);
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Cabeçalho */
+th {
+    background: #0049b8;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Células */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e3eaf2;
+    font-size: 14px;
+}
+
+/* Linhas alternadas */
+tr:nth-child(even) {
+    background: #f4f9fd;
+}
+
+/* Hover */
+tr:hover {
+    background: #e1f0ff;
+    transition: 0.2s;
+}
+
+/* Observações */
+td:last-child {
+    max-width: 200px;
+    word-wrap: break-word;
+}
