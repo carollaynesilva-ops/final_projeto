@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Autenticação - Cliente</title>
-    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="css/style5.css">
 </head>
 <body>
 

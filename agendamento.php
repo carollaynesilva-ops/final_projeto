@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="shortcut icon" href="imagens/logo.png">
 </head>
 
@@ -81,7 +81,7 @@
     <br>
 
     <!-- BOTÕES PARA AGENDAMENTO -->
-     
+
     <div id="btn2">
         <a href="agendar.php"><button class="bnt">AGENDAR CONSULTA</button></a>
         <a href="meus_agendamentos.php"><button class="bnt">MEUS AGENDAMENTOS</button></a>

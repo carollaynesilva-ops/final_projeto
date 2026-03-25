@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="css/sstyle4.css">
     <link rel="shortcut icon" href="imagens/logo.png">
     <title>Agendar Consulta</title>
 </head>
