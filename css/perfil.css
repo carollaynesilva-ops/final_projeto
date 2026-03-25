@@ -1,135 +1,86 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-/* Fundo clínico premium */
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: linear-gradient(135deg, #e6f0ff, #cfe7ff);
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fb, #dfe7f5);
 }
 
-/* Container */
+/* Container central */
 .perfil {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
     text-align: center;
-    animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Título */
-.perfil h2 {
-    color: #0d6efd;
-    margin-bottom: 10px;
-}
-
-/* Subtítulo (novo) */
-.sub {
-    color: #6c757d;
-    font-size: 14px;
+/* Header */
+.header {
     margin-bottom: 20px;
 }
 
-/* Avatar */
 .avatar {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+    background: #6c8cff;
+    color: white;
+    font-size: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #0d6efd, #5aa2ff);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 35px;
-    margin: 0 auto 15px;
-    box-shadow: 0 5px 15px rgba(13,110,253,0.3);
+    margin: 0 auto 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header h2 {
+    margin: 5px 0;
+    color: #333;
+}
+
+.sub {
+    font-size: 14px;
+    color: #777;
 }
 
 /* Card */
 .card {
     background: white;
-    padding: 30px;
-    border-radius: 20px;
-    width: 360px;
-
-    box-shadow: 
-        0 10px 30px rgba(0,0,0,0.1),
-        0 0 20px rgba(13,110,253,0.15);
-
-    margin-top: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     text-align: left;
 }
 
-/* Linhas do perfil */
+/* Infos */
 .info {
-    margin: 12px 0;
-    padding: 10px;
-    border-radius: 10px;
-    background: #f4f9ff;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
-/* Label */
-.info strong {
-    color: #0d6efd;
+.info span {
+    font-size: 13px;
+    color: #888;
 }
 
-/* Tipo destaque */
-.tipo {
-    text-align: center;
-    margin-top: 15px;
-    padding: 8px;
-    border-radius: 20px;
-    font-weight: bold;
-}
-
-/* ADM */
-.tipo.adm {
-    background: #ffe5e5;
-    color: #d63384;
-}
-
-/* Cliente */
-.tipo.cliente {
-    background: #e7f1ff;
-    color: #0d6efd;
+.info p {
+    margin: 3px 0 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
 }
 
 /* Botão */
 .btn {
-    display: inline-block;
+    display: block;
     margin-top: 20px;
-    padding: 12px 25px;
-
-    background: linear-gradient(135deg, #0d6efd, #5aa2ff);
+    padding: 12px;
+    background: #294cff;
     color: white;
     text-decoration: none;
-
-    border-radius: 25px;
+    border-radius: 10px;
+    font-weight: bold;
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(13,110,253,0.3);
 }
 
-/* Hover botão */
 .btn:hover {
+    background: #0026e2;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(13,110,253,0.4);
-}
-
-/* Animação */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
